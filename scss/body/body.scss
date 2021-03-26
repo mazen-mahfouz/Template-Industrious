@@ -1,0 +1,33 @@
+
+@import "scss/varebols/varebols.scss";
+
+*{
+    box-sizing: border-box
+}
+
+body{
+    @extend %mar-pad;
+    font-family: 'Raleway', sans-serif;
+    background-color: #ffffffbd;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+
+    &::before{
+        content: " ";
+        background-image: url(img/bg.jpg);
+        @extend %pos-img;
+        position: fixed !important;
+        background-position: unset !important;
+        z-index: -10;
+    }
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}

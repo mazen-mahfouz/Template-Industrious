@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+:root {
+  --float: left;
+  --top-menu: 5px;
+  --font-size-title: 1rem;
+  --font-size-about: 0.9rem;
+  --width-about: 80%;
+  --footer-r-l: 22px;
+  --height-nav: 7vh;
+  --font-title-focus: 1.6rem;
+  --font-about-focus: .92rem; }
+
+/*# sourceMappingURL=varebols.css.map */

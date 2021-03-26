@@ -1,0 +1,267 @@
+
+@import "scss/varebols/varebols.scss";
+
+@for $i from 1 through 2{
+    #header#{$i}{
+        @extend %header;
+
+        #header#{$i}-content{
+            @extend %header-content;
+
+            #header#{$i}-content-top{
+                @extend %header-content-top;
+
+                h2{
+                    @extend %title-about;
+                }
+
+                p{
+                    @extend %about;
+                }
+            }
+
+            #header#{$i}-content-center{
+                @extend %header-content-center;
+            }
+
+        }
+    }
+}
+
+// start header
+
+#header1{
+    
+    #header1-content{
+
+        #header1-content-center{
+
+            .iconify{
+                font-size: 62px;
+                color: #ce1b28;
+            }
+
+            h3{
+                @extend %title-about;
+                font-size: calc(var(--font-size-title) + .15rem) !important;
+                margin-top: 32px !important;
+                line-height: unset !important;
+            }
+
+            p{
+                @extend %about;
+                color: #444444 !important;
+                width: var(--width-about) !important;
+                margin-top: 23px !important;
+            }
+        }
+    }
+}
+
+// end header
+
+// start header-brake
+
+#header-brake{
+    width: 100%;
+    background: red;
+    position: relative;
+    @extend %center-elm;
+    z-index: 9999;
+    padding-top: 9%;
+    padding-bottom: 9%;
+    box-sizing: border-box;
+    
+
+    &::before{
+        content: " ";
+        @extend %pos-img;
+        background-image: url(img/cta01.jpg);
+        opacity: .85 !important;
+        z-index: -10;
+        background-attachment: fixed;
+    }
+
+    #header-brake-content{
+        width: 87%;
+        margin-top: -4px;
+        text-align: center;
+
+        h2{
+            @extend %title-about;
+            color: #ffffff !important;
+        }
+
+        p{
+            @extend %about;
+            color: rgba(255, 255, 255, 0.75) !important;
+            margin-top: 24px !important;
+            width: auto !important;
+        }
+    }
+}
+
+// end header-brake
+
+// start header2
+
+#header2{
+
+    #header2-content{
+        width: 91%;
+
+        #header2-content-center{
+                @extend %center-elm;
+                padding-left: 28px;
+                padding-top: 3vh;
+                padding-bottom: 21px;
+                
+            #header2-content-center-conn{
+                width: 100%;
+                height: 89%;
+                
+
+                p{
+                    @extend %about;
+                    text-align: left;
+                    width: 74% !important;
+                    font-style: italic;
+                    margin-bottom: 46px !important;
+                    position: relative !important;
+
+                    &::before{
+                    content: "";
+                    position: absolute;
+                    left: -38px;
+                    top: -12%;
+                    width: 7px;
+                    height: 125%;
+                    background: rgba(0, 0, 0, 0.25);
+                    }
+                }
+
+                img{
+                    width: 51px;
+                    float: left;
+                    border-radius: 100%;
+                    transform: translateX(2px);
+                }
+
+                h4{
+                    font-size: calc(var(--font-size-about) - .21rem);
+                    font-weight: 100;
+                    transform: translate(141px, 22px);
+                    position: absolute;
+
+                    &::before{
+                        content: "Jane Doe ";
+                        color: #ce1b28;
+                        margin-left: -52px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end header2
+
+// start footer
+
+#footer{
+    width: 100%;
+    background-color: #111111;
+    padding-left: var(--footer-r-l);
+    padding-right: var(--footer-r-l);
+    padding-bottom: calc(var(--footer-r-l) - 2px);
+    box-sizing: border-box;
+
+    #footer-top{
+        @extend %footer-conn;
+        padding-top: calc(var(--footer-r-l) + 8px);
+        box-sizing: border-box;
+        padding-bottom: calc(var(--footer-r-l) + 2px);
+        padding-right: 1px;
+
+        h2{
+            @extend %title-about;
+            color: $title-color !important;
+            font-size: calc(var(--font-size-title) + .15rem) !important;
+            
+        }
+
+        p{
+            @extend %about;
+            color: $main-color !important;
+            width: auto !important;
+        }
+    }
+
+    #footer-center{
+        @extend %footer-conn;
+        padding-top: 5px;
+
+        h2{
+            @extend %footer-title;
+            font-size: calc(var(--font-size-title) - 0.08rem) !important;
+            margin-bottom: 24px;
+        }
+
+        li{
+            color: rgba(255, 255, 255, 0.5);
+            font-size: calc(var(--font-size-about) + 0.02rem) !important;
+            margin-bottom: 14.5px;
+            padding-bottom: 14.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+            &:nth-child(4){
+                border: none;
+            }
+        }
+    }
+
+    #footer-down{
+        @extend %footer-conn;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        margin-bottom: 20px;
+
+        h2{
+            @extend %footer-title;
+            font-size: calc(var(--font-size-title) - 0.08rem) !important;
+            margin-bottom: 12px;
+        }
+
+        li{
+            color: rgba(255, 255, 255, 0.5);
+            font-size: calc(var(--font-size-about) + 0.05rem) !important;
+            margin-left: 4px;
+            margin-bottom: 12px;
+        }
+
+        .iconify{
+            font-size: 17px;
+            color: white;
+            padding: 7px;
+            background: black;
+            border-radius: 15%;
+            margin-right: 10px;
+            transform: translateY(10px) !important;
+            box-sizing: initial;
+        }
+    }
+
+    #copyright{
+        width: 100%;
+        height: 8%;
+        @extend %center-elm;
+
+        p{
+            color: rgba(255, 255, 255, 0.3);
+            font-size: calc(var(--font-size-about) - .18rem);
+        }
+    }
+}
+
+// end footer

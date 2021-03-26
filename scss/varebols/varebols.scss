@@ -1,0 +1,127 @@
+
+$title-color: white;
+$main-color: rgba(255, 255, 255, 0.5);
+$title-about: #555555;
+$about: #444444;
+
+
+%mar-pad{
+  margin: 0;
+  padding: 0;
+}
+
+%na-le-ri{
+  width: 50%;
+  float: var(--float);
+}
+
+%menu-sty{
+  width: 14px;
+  height: 3px;
+  background-color: $main-color;
+}
+
+%menu-bef-aft{
+  content: "";
+  position: absolute;
+  top: var(--top-menu);
+  @extend %menu-sty;
+}
+
+%title-about{
+  color: $title-about;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: calc(var(--font-size-title) + 0.6rem);
+  line-height: 1.5;
+}
+
+%about{
+  color: $about;
+  width: calc(var(--width-about) - 9%);
+  margin-top: 22px !important;
+  font-size: calc(var(--font-size-about) + 0.02rem);
+  line-height: 1.65;
+  margin: auto;
+}
+
+%bac-img{
+  width: 100%;
+  position: relative;
+  background: linear-gradient(135deg, #b7111d 0%, #111111 74%);
+}
+
+%pos-img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  opacity: .25;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+%center-elm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%header{
+  width: 100%;
+  background-color: #ffffffbd;
+  @extend %center-elm;
+}
+
+%header-content{
+  width: 90%;
+}
+
+%header-content-top{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 60px;
+  padding-top: 8%;
+}
+
+%header-content-center{
+  width: 98%;
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 4.5vh;
+  padding-top: 9vh;
+  padding-bottom: 6vh;
+}
+  
+%footer-conn{
+  width: 100%;
+} 
+
+%footer-title{
+  @extend %title-about;
+  color: $title-color !important;
+  font-size: calc(var(--font-size-title) + .15rem);
+}
+
+
+  :root {
+		--float: left;
+    --top-menu: 5px;
+    --font-size-title: 1rem;
+    --font-size-about: 0.9rem;
+    --width-about: 80%;
+    --footer-r-l: 22px;
+    --height-nav: 7vh;
+    --font-title-focus: 1.6rem;
+    --font-about-focus: .92rem;
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i}{
+        @extend %mar-pad;
+    }
+}
